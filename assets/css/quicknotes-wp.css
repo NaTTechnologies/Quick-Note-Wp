@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+.quicknotes-wrapper {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 100;
+    font-family: 'Quicksand', sans-serif !important;
+    transition:0.99s;
+}
+.quicknotes-float-btn {
+    background-color: #284BB0;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif !important;
+}
+.quicknotes-modal {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    z-index: 99;
+    width: 90vh;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    transition:0.99s;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif !important;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+@media (max-width: 767px) {
+    .quicknotes-modal {
+        width: 50vh;
+    }
+}
+
+
+.quicknotes-modal-visible {
+    display: block;
+}
+
+/* .quicknotes-wrapper:hover .quicknotes-modal {
+    display: block;
+} */
+
+.quicknotes-note, .quicknotes-add-note-form {
+    background-color: #BDC8E6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-note-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif !important;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    line-height: 1.75;
+    padding: 7px 15px;
+}
+
+.quicknotes-note-date {
+    font-size: 12px;
+    color: #777;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-note-content {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-note-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-edit-note,
+.quicknotes-delete-note {
+    background-color: #0073aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-delete-note {
+    background-color: #ca4a1f;
+    margin-left: 5px;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-edit-note:hover {
+    background-color: #008ec2;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-delete-note:hover {
+    background-color: #d54e21;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.quicknotes-add-note, .quicknotes-save-note{
+    background-color: #284BB0;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif !important;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.quicknotes-save-note{
+    margin-top: 20px;
+}
+
+.quicknotes-title{
+    margin-bottom: 30px !important;
+    font-size: 1.1em;
+}
+
+.quicknotes-list{
+    margin-top: 10px;
+}
+
+/* Estilos generales para la barra de desplazamiento */
+.quicknotes-modal::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+/* Estilo del pulgar (la parte móvil) de la barra de desplazamiento */
+.quicknotes-modal::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #888;
+}
+
+/* Estilo del pulgar al pasar el cursor sobre él */
+.quicknotes-modal::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.quicknotes-note-content {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+    resize: vertical;
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: white;
+}
+
+.quicknotes-note-content:focus {
+    /* box-shadow: 0 0 3px rgba(102, 175, 233, 0.6); */
+}
+
+.quicknotes-add-note-form{
+    background-color: white;
+}
+
+.quicknotes-list p{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
