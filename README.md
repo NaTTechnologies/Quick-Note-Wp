@@ -17,7 +17,6 @@ QuickNotes WP se integra perfectamente en cualquier sitio web de WordPress, prop
 - Barra flotante para acceso rápido a las notas.
 - Panel de notas con lista de notas existentes y opción de agregar nuevas.
 - Funciones CRUD (Crear, Leer, Actualizar, Eliminar) para las notas.
-- Exportación de notas a Excel desde el panel de administración.
 - Visualización de todas las notas de los usuarios en el panel de administración, con filtros para facilitar la búsqueda.
 - Integración de AJAX para una experiencia de usuario fluida.
 
